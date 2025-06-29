@@ -2,10 +2,14 @@ name: Deploy Next.js Portfolio to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main  # Change this to your default branch if different
+      - infrastructure
   pull_request:
     types: [closed]
-    branches: [ "main" ]
+    branches:
+      - main  # Change this to your default branch if different
+      - infrastructure
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
