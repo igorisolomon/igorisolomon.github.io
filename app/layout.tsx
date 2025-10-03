@@ -1,18 +1,18 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
+import { Lexend } from "next/font/google"
 import "./globals.css"
 
-const geist = Geist({
+const lexend = Lexend({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-geist",
+  variable: "--font-lexend",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
-  title: "Felix Macaspac - HubSpot CMS Developer",
-  description: "HubSpot CMS Developer from Philippines with 5 years of experience.",
-  generator: "v0.app",
+  title: "Solomon Igori - Software Engineer",
+  description: "Software Engineer from the United Kingdom with 5 years of experience.",
 }
 
 export default function RootLayout({
@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${geist.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en">
+      <body className={`${lexend.className} font-light antialiased`}>{children}</body>
     </html>
   )
 }

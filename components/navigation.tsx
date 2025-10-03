@@ -25,15 +25,15 @@ export function Navigation({ isDark, toggleTheme }: NavigationProps) {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
           <button
             onClick={() => scrollToSection("intro")}
             className="text-xl font-light tracking-tight hover:text-muted-foreground transition-colors duration-300"
           >
-            Felix Macaspac
+            {"<0xIg>"}
           </button>
 
           {/* Desktop Navigation */}
