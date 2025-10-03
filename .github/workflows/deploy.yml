@@ -50,9 +50,10 @@ jobs:
         uses: actions/configure-pages@v4
         
       - name: Build with Next.js
-        run: |
-          pnpm run build
-          touch out/.nojekyll
+        run: pnpm run build
+
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
