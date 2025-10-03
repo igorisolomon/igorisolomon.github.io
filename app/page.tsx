@@ -58,7 +58,7 @@ export default function Home() {
 
       <main className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-16">
         <header
-          id="intro"
+          id="me"
           ref={(el) => { sectionsRef.current[0] = el }}
           className="min-h-screen flex items-center opacity-0"
         >
@@ -84,7 +84,6 @@ export default function Home() {
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     United Kingdom
                   </div>
-                  {/* <div>| Nigeria 🇳🇬</div> */}
                 </div>
               </div>
             </div>
@@ -116,6 +115,7 @@ export default function Home() {
           </div>
         </header>
 
+        {/* Work Experience */}
         <section
           id="work"
           ref={(el) => { sectionsRef.current[1] = el }}
@@ -185,43 +185,40 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Recent Projects */}
         <section
-          id="thoughts"
+          id="projects"
           ref={(el) => { sectionsRef.current[2] = el }}
           className="min-h-screen py-20 sm:py-32 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
-            <h2 className="text-3xl sm:text-4xl font-light">Recent Thoughts</h2>
+            <h2 className="text-3xl sm:text-4xl font-light">Recent Projects</h2>
 
             <div className="grid gap-6 sm:gap-8 lg:grid-cols-2">
               {[
                 {
-                  title: "The Future of Web Development",
-                  excerpt: "Exploring how AI and automation are reshaping the way we build for the web.",
-                  date: "Dec 2024",
-                  readTime: "5 min",
-                  url: "#"
+                  title: "Pinavel",
+                  excerpt: "An AI-powered platform that streamlines exam training, travel booking, and tour guidance.",
+                  date: "July 2025",
+                  url: "https://pinavel.com"
                 },
                 {
-                  title: "Design Systems at Scale",
-                  excerpt: "Lessons learned from building and maintaining design systems across multiple products.",
-                  date: "Nov 2024",
-                  readTime: "8 min",
-                  url: "#"
+                  title: "Kanu Energy",
+                  excerpt: "An intelligence platform that streamlines renewable energy asset evaluation and acquisition.",
+                  date: "March 2025",
+                  url: "https://kanu.energy"
                 },
                 {
-                  title: "Performance-First Development",
-                  excerpt: "Why performance should be a first-class citizen in your development workflow.",
-                  date: "Oct 2024",
-                  readTime: "6 min",
-                  url: "#"
+                  title: "Gammahill",
+                  excerpt: "A hub for incubating innovative solutions in the ecommerce, finance and creative industry.",
+                  date: "April 2023",
+                  url: "https://gammahill.com"
                 },
                 {
-                  title: "The Art of Code Review",
-                  excerpt: "Building better software through thoughtful and constructive code reviews.",
-                  date: "Sep 2024",
-                  readTime: "4 min",
-                  url: "#"
+                  title: "Eloquent Data",
+                  excerpt: "A social impact project that provides the tools and resources for data literacy.",
+                  date: "September 2020",
+                  url: "https://eloquentdata.com"
                 },
               ].map((post) => (
                 <Link
@@ -236,7 +233,6 @@ export default function Home() {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">
                         <span>{post.date}</span>
-                        <span>{post.readTime}</span>
                       </div>
 
                       <h3 className="text-lg sm:text-xl font-medium group-hover:text-muted-foreground transition-colors duration-300">
@@ -246,7 +242,7 @@ export default function Home() {
                       <p className="text-muted-foreground leading-relaxed">{post.excerpt}</p>
 
                       <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                        <span>Read more</span>
+                        <span>View Project</span>
                         <svg
                           className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
                           fill="none"
@@ -276,12 +272,12 @@ export default function Home() {
 
               <div className="space-y-6">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Always interested in new opportunities, collaborations, and conversations about technology and design.
+                  I'm open to new opportunities and collaborations.
                 </p>
 
                 <div className="space-y-4">
                   <Link
-                    href="mailto:test@example.com"
+                    href="mailto:igorisolomon@gmail.com"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
                     <span className="text-base sm:text-lg">igorisolomon@gmail.com</span>
@@ -303,14 +299,16 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  { name: "GitHub", handle: "@igorisolomon", url: "#" },
-                  { name: "Twitter", handle: "@solomonigori", url: "#" },
-                  { name: "Instagram", handle: "@solomonigori", url: "#" },
+                  { name: "GitHub", handle: "@igorisolomon", url: "https://github.com/igorisolomon" },
+                  { name: "Twitter", handle: "@solomonigori", url: "https://twitter.com/solomonigori" },
+                  { name: "Instagram", handle: "@solomonigori", url: "https://instagram.com/solomonigori" },
                   { name: "LinkedIn", handle: "Solomon Igori", url: "https://www.linkedin.com/in/solomon-igori/" },
                 ].map((social) => (
                   <Link
                     key={social.name}
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-300 hover:shadow-sm"
                   >
                     <div className="space-y-2">
