@@ -1,9 +1,8 @@
 "use client"
 
+import { Navigation } from "@/components/navigation"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
-import { Navigation } from "@/components/navigation"
-import { url } from "inspector"
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true)
@@ -44,7 +43,7 @@ export default function Home() {
 
       <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
         <div className="flex flex-col gap-4">
-          {["intro", "work", "thoughts", "connect"].map((section) => (
+          {["me", "work", "projects", "connect"].map((section) => (
             <button
               key={section}
               onClick={() => document.getElementById(section)?.scrollIntoView({ behavior: "smooth" })}
