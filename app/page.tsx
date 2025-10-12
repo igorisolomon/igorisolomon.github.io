@@ -66,7 +66,7 @@ export default function Home() {
               <div className="space-y-3 sm:space-y-2">
                 <div className="text-sm text-muted-foreground font-mono tracking-wider">PORTFOLIO</div>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extralight tracking-tight">
-                  Solomon
+                  osá Solomon
                   <br />
                   <span className="text-muted-foreground">Igori</span>
                 </h1>
